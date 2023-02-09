@@ -51,6 +51,13 @@ itemForm.onsubmit = async (event) => {
   itemForm.reset()
 }
 
+itemForm.onreset = async (event) => {
+  event.preventDefault()
+  await db.items.delete(id)
+  await populateItemsDiv()
+  itemForm.reset()
+}
+
 const toggleItemStatus = async (event, id) => {
   await db.items.update(id, { isPurchased: !! event.target.checked })
   await populateItemsDiv()

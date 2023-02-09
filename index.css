@@ -42,6 +42,13 @@ nav {
   padding: 0.5rem;
 }
 
+#removeItemsButton {
+  border: unset;
+  background: red;
+  color: #fff;
+  padding: 0.5rem;
+}
+
 #itemsDiv {
   margin-top: 3rem;
   margin-bottom: 2rem;
